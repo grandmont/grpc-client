@@ -3,9 +3,10 @@ import express, { Application } from "express";
 import routes from "./routes";
 
 export default class Server {
-    app: Application;
+    public app: Application;
 
     constructor() {
+        this.app = express();
         this.init();
     }
 

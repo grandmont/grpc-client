@@ -9,10 +9,10 @@ service Mail {
 message Void {}
 
 message MailRequest {
-    string from = 2;
-    string to = 3;
-    string subject = 4;
-    string html = 5;
+    string from = 1;
+    string to = 2;
+    string subject = 3;
+    string template = 4;
 }
 
 message Response {
