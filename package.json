@@ -1,5 +1,6 @@
 {
     "name": "grpc-client",
+    "description": "A simple REST API to demonstrate the power of gRPC",
     "version": "1.0.0",
     "main": "src/app.ts",
     "scripts": {
