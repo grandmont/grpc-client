@@ -1,0 +1,21 @@
+version: "3.2"
+
+services:
+    email-service:
+        build: ./email-service
+        container_name: email-service
+        ports:
+            - "40000:40000"
+        command: yarn start
+    api:
+        build: .
+        container_name: api
+        ports:
+            - "3001:3001"
+        command: node build/app.js
+        environment:
+            NODE_ENV: production
+            PORT: 3001
+            EMAIL_SERVICE_HOST: email-service:40000
+        depends_on:
+            - email-service

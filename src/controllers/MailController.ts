@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-import client from "../client";
+import { email } from "../clients";
 
 const POST = {
     sendMail(req: Request, res: Response) {
@@ -13,7 +13,7 @@ const POST = {
                 template: "welcome",
             };
 
-            client.sendMail(request, (error: Error) => {
+            email.sendMail(request, (error: Error) => {
                 if (error) {
                     throw new Error(error.message);
                 }
