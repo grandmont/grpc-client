@@ -1,3 +1,0 @@
-[submodule "email-service"]
-	path = email-service
-	url = https://github.com/grandmont/email-service.git

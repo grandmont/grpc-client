@@ -2,7 +2,8 @@ version: "3.2"
 
 services:
     email-service:
-        build: ./email-service
+        # build: ./email-service
+        image: 8044626f6372
         container_name: email-service
         ports:
             - "40000:40000"
