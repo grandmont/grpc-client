@@ -1,0 +1,12 @@
+version: "3.2"
+
+services:
+    app:
+        build: .
+        container_name: api
+        ports:
+            - "3001:3001"
+        command: node build/app.js
+        environment:
+            NODE_ENV: production
+            PORT: 3001
