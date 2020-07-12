@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package emailPackage;
+
+service Email {
+    rpc test(Void) returns(Counter);
+    rpc sendMail(MailRequest) returns(Response);
+}
+
+message Void {}
+
+message MailRequest {
+    string from = 1;
+    string to = 2;
+    string subject = 3;
+    string template = 4;
+}
+
+message Response {
+    bool status = 1;
+}
+
+message Counter {
+    int32 counter = 1;
+}

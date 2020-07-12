@@ -20,5 +20,8 @@ WORKDIR /usr/app
 COPY --from=0 /srv/build ./build
 COPY --from=0 /srv/node_modules ./node_modules
 
+# Protocol Buffers
+COPY --from=0 /srv/protos ./protos
+
 EXPOSE 3001
 CMD ["node", "build/app.js"]

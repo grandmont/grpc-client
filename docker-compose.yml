@@ -16,5 +16,6 @@ services:
         environment:
             NODE_ENV: production
             PORT: 3001
+            EMAIL_SERVICE_HOST: email-service:40000
         depends_on:
             - email-service
