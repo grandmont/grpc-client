@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 
-import client from "./client";
+import { email } from "./clients";
 
 // Controllers
 import MailController from "./controllers/MailController";
@@ -8,7 +8,7 @@ import MailController from "./controllers/MailController";
 const router = Router();
 
 router.get("/", (req: Request, res: Response) => {
-    client.test({}, (error: any, response: any) => {
+    email.test({}, (error: any, response: any) => {
         console.log(error);
         console.log(response);
     });
