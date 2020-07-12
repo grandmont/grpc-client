@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-import client from "../grpc";
+import client from "../client";
 
 const POST = {
     sendMail(req: Request, res: Response) {
